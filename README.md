@@ -10,7 +10,6 @@ module dns {
 }
 ```
 
-
 ## Module Variables
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
@@ -18,9 +17,19 @@ module dns {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| apps | Multiple applications to deploy | map | n/a | yes |
-| namespace | Namespace to where deploy CI/CD | string | n/a | yes |
-| repository | Collection of Helm repositories | string | n/a | yes |
+| parent\_dns\_zone\_id | The ID of the hosted zone to contain this record. | string | n/a | yes |
+| parent\_dns\_zone\_name | The name of the hosted zone | string | n/a | yes |
+| subdomain | Subdomain zone | string | n/a | yes |
+| tags | A mapping of tags to assign to the zone. | map(string) | `{}` | no |
+| ttl | The TTL of the recod | string | `"30"` | no |
+| type | The record  type. Valid values are A, AAAA, CAA, CNAME, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT. | string | `"NS"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| zone\_id | Zone ID for a dns distribution |
+| zone\_name | The name of the zone record. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
