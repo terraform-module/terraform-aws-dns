@@ -7,7 +7,10 @@ Here's the gist of using it via github.
 ```terraform
 module dns {
   source     = "github.com/terraform-module/terraform-aws-dns?ref=v<VERSION>"
-  
+
+  subdomain = "subdomain"
+  parent_dns_zone_name = "example.com."
+  parent_dns_zone_id  = "zone-id
 }
 ```
 
@@ -38,10 +41,10 @@ module dns {
 
 <!-- START makefile-doc -->
 ```
-$ make help 
+$ make help
 hooks                          Commit hooks setup
 validate                       Validate with pre-commit hooks
 changelog                      Create a changelog
-release                        Create release version 
+release                        Create release version
 ```
 <!-- END makefile-doc -->
