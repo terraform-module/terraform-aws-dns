@@ -6,7 +6,8 @@ Here's the gist of using it via github.
 
 ```terraform
 module dns {
-  source     = "git@github.com:terraform-aws-dns.git/jenkins?ref=v2.0.0"
+  source     = "github.com/terraform-module/terraform-aws-dns?ref=v<VERSION>"
+  
 }
 ```
 
@@ -40,6 +41,7 @@ module dns {
 $ make help 
 hooks                          Commit hooks setup
 validate                       Validate with pre-commit hooks
+changelog                      Create a changelog
 release                        Create release version 
 ```
 <!-- END makefile-doc -->

@@ -9,7 +9,7 @@ terraform {
 # ========= #
 
 resource aws_route53_zone this {
-  name    = fomat("%s.%s", var.subdomain, var.parent_dns_zone_name)
+  name    = format("%s.%s", var.subdomain, var.parent_dns_zone_name)
   comment = "${var.subdomain} DNS hosted zone"
   tags    = var.tags
 }
