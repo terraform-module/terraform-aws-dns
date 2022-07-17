@@ -135,4 +135,4 @@ Currently maintained by [Ivan Katliarchuk](https://github.com/ivankatliarchuk) a
 
 ## Terraform Registry
 
-- [Module](https://registry.terraform.io/modules/terraform-module/cloudfront/aws/latest)
+- [Module](https://registry.terraform.io/modules/terraform-module/dns/aws/latest)
